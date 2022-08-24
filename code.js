@@ -34,5 +34,11 @@ const helloWorld = function() {
 // }
 
 function sayHello(name) {
-    return "Hello, " + name + "!";
+    if(name === undefined || typeof name === "boolean") {
+        return "Hello, World!"
+    } else {
+        return "Hello, " + name + "!";
+    }
+
 }
+
