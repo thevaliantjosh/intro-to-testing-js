@@ -16,13 +16,23 @@
 // Step 6: Repeat (Repeat the process by moving to build the next, small test)
 // Always: Add, commit, and push your work to GitHub.
 
+//Exercise #3: Step 1: Now that the function exists and returns the right data type, let's add our first realistic assertion. In tests.js, assert that sayHello("Jane") returns "Hello, Jane!". Our first test should be super simple and super small.
+// Step 2: Run all tests and make sure that this newly added test is red.
+//     Step 3: If the test wants us to return "Hello, Jane!" then literally write return "Hello, Jane!"; because that's the simplest way to green a test looking for "Hello, Jane!".
+// Step 4: Run all tests. They should all be green at this point.
+//     Step 5: It's too soon to refactor.
+// Step 6: Repeat step means to add another test, so let's move to the next exercise.
 
-describe("helloWorld", function() {
-    it("should be a defined function", function () {
-        expect(typeof helloWorld).toBe("function");
+
+describe("sayHello", function() {
+    it("should be a defined function.", function () {
+        expect(typeof sayHello).toBe("function");
     });
     it("should return a string when called.", function () {
-        expect(typeof helloWorld()).toBe("string")
+        expect(typeof sayHello()).toBe("string")
+    });
+    it('should return the string "Hello, Jane!" when executed', function () {
+        expect(sayHello()).toBe("Hello, Jane!");
     });
 });
 
